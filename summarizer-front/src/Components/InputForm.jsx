@@ -13,8 +13,7 @@ function InputForm() {
                     required: true,
                     message: 'Text to summarize can\'t be empty!',
                 },
-                ]}
-            >
+                ]}>
                 <Input.TextArea rows={15}/>
             </Form.Item>
             <Form.Item>
