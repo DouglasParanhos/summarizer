@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import InputForm from './Components/InputForm';
+import InputForm from './components/InputForm';
 
 function App() {
   return (
