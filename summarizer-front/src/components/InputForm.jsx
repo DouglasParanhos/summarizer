@@ -8,17 +8,15 @@ class InputForm extends React.Component  {
 
     formRef = React.createRef();
 
-    submitData = () => {
-        console.log(this.formRef.current.getFieldsValue);
-
+    onFinish = values => {
         let data = {
-            summaryPercent: this.formRef.summaryPercent,
-            originalText: this.formRef.originalText,
-            summaryText: this.formRef.summaryText
+            summaryPercent: values.summaryPercent,
+            originalText: values.originalText,
+            // summaryText: this.formRef.summaryText
         };
 
-        // this.postSummary(data);
-    }
+        this.props.postSummary(data);
+    };
 
     constructor(props){
         super(props);
@@ -29,7 +27,8 @@ class InputForm extends React.Component  {
             <Form ref={this.formRef} 
                 initialValues={{ summaryPercent: this.props.summaryPercent,
                                 originalText: this.props.originalText,
-                                summaryText: this.props.summaryText}}>
+                                summaryText: this.props.summaryText}}
+                onFinish={this.onFinish}>
                 <Form.Item
                     name="summaryPercent"
                     rules={[
@@ -57,7 +56,7 @@ class InputForm extends React.Component  {
                     <Input.TextArea rows={15}/>
                 </Form.Item>
                 <Form.Item>
-                    <Button type="primary" htmlType="submit" onClick={ () => this.submitData()}>
+                    <Button type="primary" htmlType="submit" >
                         Summarize
                     </Button>
                 </Form.Item>
