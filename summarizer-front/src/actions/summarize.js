@@ -9,7 +9,7 @@ export function postSummary(payload){
     console.log("caí no action de gerar resumo");
 
     return function(dispatch){
-        return fetch(`$(ROOT_URL)/summarize`,
+        return fetch('https://localhost/summarize',
         {
             method: 'POST',
             headers: {
