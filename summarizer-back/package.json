@@ -1,0 +1,30 @@
+{
+  "name": "summarizer-back",
+  "version": "1.0.0",
+  "description": "Backend from Summarizer app",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DouglasParanhos/summarizer.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DouglasParanhos/summarizer/issues"
+  },
+  "homepage": "https://github.com/DouglasParanhos/summarizer#readme",
+  "dependencies": {
+    "body": "^5.1.0",
+    "body-parser": "^1.19.0",
+    "consign": "^0.1.6",
+    "express": "^4.17.1",
+    "parser": "^0.1.4"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.3"
+  }
+}
